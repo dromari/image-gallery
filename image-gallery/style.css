@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(./assets/fonts/Montserrat-Bold.ttf);
+    font-size: 700;
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(./assets/fonts/Montserrat-Regular.ttf);
+    font-size: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+}
+
+.header {
+    display: flex;
+    border-bottom: 5px solid orange;
+    height: 75px;
+}
+
+.header-wrapper {
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+}
+
+.logo-img img {
+    width: 100%;
+}
+
+.logo-text {
+    font-family: Montserrat-Regular;
+    margin-left: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.loupe {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 5%;
+    background: url(assets/images/loupe-black.svg) no-repeat;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.loupe:hover {
+    transition: 1s;
+    background: url(assets/images/loupe-orange.svg) no-repeat;
+}
+
+input[type=search] {
+    /*appearance: none;*/
+    width: 350px;
+    height: 29px;
+    border: 1px solid #DDDDDD;
+    border-radius: 25px;
+    padding: 8px 12px 8px 50px;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+
+}
+
+input[type="search"]:focus {
+    outline: none;
+}
+
+/*input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: url(assets/images/icons8-cross-64.png);
+
+}*/
+
+
+.input:focus {
+    color: #212529;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ffa500;
+    outline: 0;
+}
+
+.main {
+    display: flex;
+}
+
+.images {
+    width: 1280px;
+    margin: 2% auto;
+    display: flex;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 2%;
+}
+
+.img-container img {
+    width: 380px;
+    height: 214px;
+    margin-top: 15px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    border-top: 5px solid orange;
+}
+
+.footer-content {
+    width: 1280px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.footer-content li {
+    display: flex;
+    justify-content: center;
+    width: 7%;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.footer-content li:hover {
+    transition: 1s;
+    transform: scale(1.3);
+}
+
+h2 {
+    font-family: Montserrat-Bold;
+}
+
+.github {
+    width: 55%;
+}
+
+.rsschool {
+    width: 73%;
+}
+
+.github img {
+    width: 100%;
+}
+
+.rsschool img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .header-wrapper,
+    .images,
+    .footer-content {
+        max-width: 1280px;
+        padding: 0 2%;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+    .images {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        height: 115px;
+    }
+
+    .header-wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .footer-content {
+        justify-content: space-evenly;
+        padding: 0 10px;
+    }
+
+    .github {
+        width: 80%;
+    }
+
+    .rsschool {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 465px) {
+    .input {
+        width: 100%;
+    }
+
+    .logo-text {
+
+        font-size: 25px;
+    }
+
+
+}
